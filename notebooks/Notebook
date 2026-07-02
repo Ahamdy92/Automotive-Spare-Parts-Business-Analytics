@@ -1,0 +1,11 @@
+from python.load_data import load_sheet
+from python.sales_analysis import *
+from python.visualization import *
+
+file = "data/Sample_data.xlsx"
+
+sales = load_sheet(file, "دفتر اليومية")
+
+monthly = monthly_sales(sales)
+
+plot_bar(monthly, "Monthly Sales")
